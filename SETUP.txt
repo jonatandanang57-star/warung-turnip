@@ -1,0 +1,60 @@
+# Checklist Setup Aplikasi Warung Turnip
+
+## ✅ File-file yang telah dibuat:
+
+### Database
+- [x] database.sql - File database dengan struktur lengkap
+
+### Configuration
+- [x] config.php - File konfigurasi database dan session
+
+### Frontend (CSS)
+- [x] style.css - Styling aplikasi sederhana
+
+### Authentication
+- [x] login.php - Halaman login admin
+
+### Pages
+- [x] index.php - Dashboard utama
+- [x] barang.php - Kelola master barang (tambah, edit, hapus)
+- [x] barang_masuk.php - Input barang masuk dari supplier
+- [x] penjualan.php - Catat penjualan barang
+- [x] stok.php - Laporan stok dan monitoring
+- [x] logout.php - Logout admin
+
+### Documentation
+- [x] DOKUMENTASI.md - Panduan lengkap setup dan penggunaan
+
+---
+
+## 🚀 Langkah Setup Cepat:
+
+1. **Copy semua file ke:** `C:\xampp\htdocs\PROJECT SQL\`
+
+2. **Buat database MySQL:**
+   - Buka phpMyAdmin: http://localhost/phpmyadmin
+   - Buat database baru: `toko_management`
+   - Import file: `database.sql`
+
+3. **Jalankan aplikasi:**
+   - Buka: http://localhost/PROJECT SQL/
+   - Login dengan: `admin` / `admin123`
+
+4. **Mulai gunakan!**
+
+---
+
+## 📋 Fitur Utama:
+
+✅ Login admin  
+✅ Kelola master barang (CRUD)  
+✅ Input barang masuk + update stok otomatis  
+✅ Catat penjualan + update stok otomatis  
+✅ Laporan stok dengan peringatan stok rendah  
+✅ Dashboard dengan ringkasan data  
+✅ Riwayat barang masuk & penjualan  
+✅ Tampilan sederhana & user-friendly  
+
+---
+
+**Aplikasi siap digunakan! 🎉**
