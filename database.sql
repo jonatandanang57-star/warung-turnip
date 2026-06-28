@@ -1,8 +1,3 @@
--- Database Pengelolaan Warung Turnip
-CREATE DATABASE IF NOT EXISTS toko_management;
-USE toko_management;
-
--- Tabel Admin/Pemilik
 CREATE TABLE admin (
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
