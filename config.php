@@ -1,31 +1,38 @@
 <?php
-// Konfigurasi Database
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'toko_management');
+// Ambil konfigurasi dari Railway jika tersedia,
+// jika tidak ada maka gunakan konfigurasi XAMPP.
+
+$db_host = getenv('MYSQLHOST') ?: 'localhost';
+$db_user = getenv('MYSQLUSER') ?: 'root';
+$db_pass = getenv('MYSQLPASSWORD') ?: '';
+$db_name = getenv('MYSQLDATABASE') ?: 'toko_management';
+$db_port = getenv('MYSQLPORT') ?: '3306';
 
 // Koneksi Database
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$conn = new mysqli(
+    $db_host,
+    $db_user,
+    $db_pass,
+    $db_name,
+    (int)$db_port
+);
 
-// Cek Koneksi
+// Cek koneksi
 if ($conn->connect_error) {
     die("Koneksi Gagal: " . $conn->connect_error);
 }
 
-// Set charset
 $conn->set_charset("utf8");
 
-// Session
 session_start();
 
-// Fungsi untuk mengecek login
-function is_logged_in() {
+function is_logged_in()
+{
     return isset($_SESSION['admin_id']);
 }
 
-// Fungsi untuk redirect jika belum login
-function check_login() {
+function check_login()
+{
     if (!is_logged_in()) {
         header("Location: login.php");
         exit();
